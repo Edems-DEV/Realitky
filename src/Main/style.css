@@ -318,16 +318,29 @@ footer{
   #costumers{grid-template-columns: 1fr 1fr;}
   #f-grid{grid-template-columns: 1fr 1fr 1fr;}
 
+
+  /*HEADER*/
+  /*icons*/
+  #l-mail:before, #l-phone:before{
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  #l-mail:before{
+    content: url('../../assets/icon_MAIL.png');
+  }
+  #l-phone:before{
+    content: url('../../assets/icon_PHONE.png');
+  }
+
+  /*BTN:hover (same as H1)*/
   .btn-phone{
     all: unset;
     font-weight: bold;
   }
-
-  /*same*/
   .line-h:hover{
     position: relative;
     display: inline-block;
-
   }
   .line-h:after{
     content: '';
