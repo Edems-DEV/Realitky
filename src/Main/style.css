@@ -18,9 +18,19 @@ a, button, input{all: unset;}
   padding-bottom: 5px;
   border-bottom: #d9d9d9 1px solid;
 }
-h1, .line-s{
-  border-width: 50px;
-  border-bottom: #ff8600 2px solid;
+.line-s{
+  position: relative;
+  display: inline-block;
+}
+.line-s:after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Center the line */
+  bottom: -5px; /* Adjust the vertical position */
+  width: 50px; /* Width of the underline */
+  height: 2px; /* Height of the underline */
+  background-color: #ff8600; /* Color of the underline */
+  transform: translateX(-50%); /* Center the line relative to the text */
 }
 
 /*HELPERS*/
@@ -73,6 +83,9 @@ input{
 .btn{
   background: #ff8600;
   color: white;
+}
+.btn:hover{
+  filter: brightness(95%);
 }
 .btn-phone{
   width: 100%;
@@ -138,6 +151,8 @@ footer{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+
+  margin-top: 10px;
 }
 #sections div{
   height: 200px;
@@ -154,6 +169,55 @@ footer{
 #sections h1{font-size: 2.5em; font-weight: bold;}
 #sections h2{font-size: 1.5em;}
 
+/*OFFERS*/
+#offers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  margin-top: 10px;
+}
+#offers a div.cover{
+  height: 200px;
+}
+/*COSTUMERS*/
+#costumers{
+    display: grid;
+    gap: 15px;
+
+    margin-top: 10px;
+}
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.customer-photo {
+  width: auto; /* Image width will be auto */
+  height: 100%; /* Height will match the testimonial text */
+  margin-right: 10px; /* Adjust space between image and text */
+}
+
+.testimonial-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns text and name vertically */
+  justify-content: space-between; /* Spaces out text and name */
+  flex-grow: 1; /* Ensures text box fills remaining space */
+}
+.testimonial-text div{
+  color: #434345;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.testimonial-text p{
+    color: #434345;
+    font-size: 1.2em;
+}
+
 /*Colors*/
 /*-------PHONE-------*/
 /*-------TABLET-------*/
@@ -163,6 +227,10 @@ footer{
   #sections{grid-template-columns: 1fr 1fr 1fr 1fr;}
   .margin{
     margin: 0px min(100px, 20%);
+  }
+  #costumers{
+    grid-template-columns: 1fr 1fr;
+
   }
 }
 
