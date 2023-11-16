@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="header"></div>
     <main class="margin">
+    <div class="margin-2">
         <div id="preview">
             <image id="pre-selected" src="./../../assets/home-img-03-442-280.jpg"/>
             <div id="pre-grid">
@@ -28,13 +33,13 @@
                     <h1>Prodej bytu 260m² s pozemkem 108 m²</h1>
                     <h2>Mezilesí, Praha 9 - Prosek</h2>
                 </div>
-                <div class="row">
+                <div id="bedge-energy" class="row">
                     <span>Energetická třída</span>
-                    <span>C</span>
+                    <span id="C">C</span>
                 </div>
             </div>
-            <div>
-                <div class="l-mb">
+            <div class="col a-l">
+                <div class="l-mb col a-l">
                     <div id="p-price">6 995 000 Kč</div>
                     <div id="p-label">za nemovitost</div>
                 </div>
@@ -133,6 +138,7 @@
                     <input id="ask-b" class="btn" type="submit" value="ODESLAT POPTÁVKU">
                 </form>
             </div>
+        </div>
         </div>
     </main>
     <div id="map">

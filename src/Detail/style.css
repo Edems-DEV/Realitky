@@ -56,7 +56,6 @@
 #properties .row{
   color: white;
   background: #00c700;
-  padding: 10px;
 
   width: fit-content;
   gap: 50px;
@@ -79,6 +78,14 @@
 #properties h1,#p-price      {font-size: 2em; ; font-weight: bold;}
 #properties h2{font-size: 1.3em}
 #properties{margin-bottom: 20px;}
+
+#bedge-energy{align-items: center}
+#properties .row{padding: 5px 10px;}
+#C{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4em;
+}
+.a-l{align-items: end;}
 
 /*PARAGRAPH*/
 #description{color: #878787}
@@ -164,6 +171,7 @@ tr:nth-child(even){background-color: #fff3e5;}
 }
 #ask textarea{resize: none; height: 150px;}
 #ask-b{justify-self: center; border-radius: 5px}
+#contact2{padding-bottom: 30px;}
 
 /*MAP*/
 #map, #map *{
@@ -177,6 +185,11 @@ tr:nth-child(even){background-color: #fff3e5;}
   #properties{flex-direction: row;}
   #contact2{grid-template-columns: 1fr 1fr};
   #seller-badges {display: flex;}
+
+  .margin-2{
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 }
 
 /*BREAK POINTS*/
@@ -190,6 +203,7 @@ tr:nth-child(even){background-color: #fff3e5;}
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
 @media (min-width: 475px)  {  .margin {max-width: 475px;}  } /* xs */
 @media (min-width: 640px)  {  .margin {max-width: 640px;}  } /* sm */
 @media (min-width: 768px)  {  .margin {max-width: 768px;}  } /* md */
