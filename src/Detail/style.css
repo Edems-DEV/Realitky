@@ -9,13 +9,15 @@
   padding: 0;
   font-family: Arial;
 }
-/*preview*/
-#preview .cover{
-  height: 150px;
-}
-#pre-selected{
-  width: 100%;
-}
+
+/*BODY*/
+/*.margin{*/
+/*  padding-left: 0rem !important;*/
+/*  padding-right: 0rem !important;*/
+/*}*/
+/*PREVIEW*/
+#pre-selected{width: 100%;}
+#preview .cover{height: 150px;}
 #pre-grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -35,8 +37,48 @@
   text-align: center;
 }
 
+/*PROPERTIES*/
+#properties{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-top: 10px;
+}
+#properties h1{color: #ff8600;}
+#properties h2{color: #878787;}
+#properties .row{
+  color: white;
+  background: #00c700;
+  padding: 10px;
+
+  width: fit-content;
+  gap: 50px;
+}
+#properties .l-mb{margin-bottom: 10px;}
+
+#p-price{color: black;}
+#p-label{color: #878787;}
+#p-calc{
+  color: #ff8600;
+  text-decoration: #ff8600 underline;
+}
+#p-calc:before{
+  display: inline-block;
+  content: url('./../../assets/icon-calculato.png');
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#properties h1,#p-price      {font-size: 2em; ; font-weight: bold;}
+#properties h2{font-size: 1.3em}
+
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
+  #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  #properties{flex-direction: row;}
 }
 
 /*BREAK POINTS*/
