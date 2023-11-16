@@ -7,8 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Header</header>
-    main>div{Name $}*4
-    <footer>Footer</footer>
+    <div id="header"></div>
+    <main>
+        <div id="preview">
+            <image id="pre-selected" src="./../../assets/home-img-03-442-280.jpg">
+            <div id="pre-grid">
+                <div class="cover" style="--url: url('./../../assets/home-img-01-442-280.jpg');"></div>
+                <div class="cover" style="--url: url('./../../assets/home-img-02-442-280.jpg');"></div>
+                <div class="cover" style="--url: url('./../../assets/home-img-04-442-280.jpg');"></div>
+                <div class="cover" style="--url: url('./../../assets/home-img-05-370x250.jpg');"></div>
+                <div class="cover" style="--url: url('./../../assets/home-img-06-370x250.jpg');"></div>
+                <div id="pre-more" class="cover dark center" style="--url: url('./../../assets/home-img-07-370x250.jpg');">
+                    <span>dalších 23 fotek</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div id="footer"></div>
 </body>
 </html>
+
+<script>
+    fetch('./../~layout/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+    fetch('./../~layout/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>

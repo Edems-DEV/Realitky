@@ -9,28 +9,56 @@
   padding: 0;
   font-family: Arial;
 }
+/*preview*/
+#preview .cover{
+  height: 150px;
+}
+#pre-selected{
+  width: 100%;
+}
+#pre-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
 
-* {
-  /*delete*/
-  /* color: white;
+  margin-top: 5px;
+}
+.cover:not(.dark):hover{border: 3px solid #ff8600;}
+#pre-more *{
+  flex-direction: column;
+  position: relative; /* Position relative to stack above the overlay */
+  z-index: 2; /* Higher z-index to be above the overlay */
+  color: white;
+
+  padding: 1em;
+  font-size: 2em;
   text-align: center;
-  text-transform: uppercase; 
-  background-color: white;*/
 }
-/*Colors*/
-/*-------PHONE-------*/
-/*-------TABLET-------*/
-@media (min-width: 481px) {
-}
+
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
 }
 
-/*center text*/
-/* body * div *, #ad-out{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
+/*BREAK POINTS*/
+.margin {
+  display: flex;
+  flex-direction: column;
 
-@media (max-width: 1025px){#ad-out{display: none !important;}  } */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+@media (min-width: 475px)  {  .margin {max-width: 475px;}  } /* xs */
+@media (min-width: 640px)  {  .margin {max-width: 640px;}  } /* sm */
+@media (min-width: 768px)  {  .margin {max-width: 768px;}  } /* md */
+@media (min-width: 1024px) {  .margin {max-width: 1024px;} } /* lg */
+@media (min-width: 1280px) {  .margin {max-width: 1280px;}
+  #hero{height: 400px;}
+  #offers a div.cover{height: 250px;}
+} /* xl */
+@media (min-width: 1536px) {  .margin {max-width: 1536px;}
+  #hero{height: 450px;}
+  #offers a div.cover{height: 300px;}
+} /* 2xl */
