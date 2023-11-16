@@ -69,7 +69,9 @@ a, button, input{all: unset;}
   background-color: rgba(0, 0, 0, 0.35); /* Removes the dark overlay */
 }
 
-
+.m-1{
+    margin: 1em;
+}
 /*Input*/
 input, .btn {
   border-radius: 4px;
@@ -180,6 +182,19 @@ footer{
 #offers a div.cover{
   height: 200px;
 }
+/*#offers a {display: inline-block;}*/
+#offers h2{
+  color: #ff8600;
+  font-size: 1.8em;
+  font-weight: bold;
+  /*margin-bottom: 100px;*/
+}
+#offers h3{
+  color: #434345;
+  font-size: 1.3em;
+}
+#offers p{/*font-weight: bold;*/}
+
 /*COSTUMERS*/
 #costumers{
     display: grid;
@@ -218,9 +233,8 @@ footer{
     font-size: 1.2em;
 }
 
-/*Colors*/
-/*-------PHONE-------*/
-/*-------TABLET-------*/
+/*FOOTER*/
+
 
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
@@ -230,15 +244,5 @@ footer{
   }
   #costumers{
     grid-template-columns: 1fr 1fr;
-
   }
 }
-
-/*center text*/
-/* body * div *, #ad-out{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-@media (max-width: 1025px){#ad-out{display: none !important;}  } */
