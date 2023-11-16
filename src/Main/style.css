@@ -22,7 +22,7 @@ a, button, input{all: unset;}
   position: relative;
   display: inline-block;
 }
-.line-s:after {
+.line-s:after{
   content: '';
   position: absolute;
   left: 50%; /* Center the line */
@@ -90,21 +90,7 @@ input{
 .btn:hover{
   filter: brightness(95%);
 }
-.btn-phone{
-  width: 100%;
-  text-align: center;
-  justify-items: center;
 
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 10px;
-
-  border: #d9d9d9 1px solid;
-  background: white; /*for hover*/
-}
-.btn-phone:hover{
-  filter: brightness(95%);
-}
 
 .btn-text{ font-weight: bold; }
 .btn-text{ text-decoration: underline #ff8600; }
@@ -129,7 +115,32 @@ header{
 #navigation{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+}
+#nav-links{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  gap: 10px;
+}
+
+.btn-phone{
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+
+  border: #d9d9d9 1px solid;
+  background: white; /*for hover*/
+}
+.btn-phone:hover{
+  filter: brightness(95%);
+  transition: filter 0.3s ease;
 }
 
 /*HERO*/
@@ -283,7 +294,7 @@ footer{
 #links h1{margin-bottom: 15px;}
 
 /*NEWS*/
-#news-2{width: 60%; /*idk*/}
+/*#news-2{width: 60%; !*TODO: idk*!}*/
 #news-2 div{margin-bottom: 20px;}
 #news-2 h1{margin-bottom: 15px;}
 
@@ -291,18 +302,52 @@ footer{
  #copyright{margin-top: 30px}
 
 /*-------DESKTOP-------*/
-@media (min-width: 1025px) {
-  .margin{
-    /*margin: 0px min(100px, 20%);*/
-  }
+@media (min-width: 1024px) {
+  #nav-links{ /*TODO: refactor me PLS*/
+    width:auto;
 
+    flex-direction: row;
+    gap: 80px;
+  }
+  #navigation{
+    flex-direction: row;
+    justify-content: space-between;
+  }
   #sections{grid-template-columns: 1fr 1fr 1fr 1fr;}
   #offers{grid-template-columns: 1fr 1fr 1fr;}
   #costumers{grid-template-columns: 1fr 1fr;}
   #f-grid{grid-template-columns: 1fr 1fr 1fr;}
+
+  .btn-phone{
+    all: unset;
+    font-weight: bold;
+  }
+
+  /*same*/
+  .line-h:hover{
+    position: relative;
+    display: inline-block;
+
+  }
+  .line-h:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0; /* Initial width */
+    height: 2px;
+    background-color: #ff8600; /* Color of the underline */
+    transform: translateX(-50%); /* Center the line relative to the text */
+    transition: width 0.3s;
+  }
+  .line-h:hover:after {
+    width: 90%; /* Width on hover */
+  }
+
 }
 
-/*SIZE:*/
+
+/*BREAK POINTS*/
 .margin {
   display: flex;
   flex-direction: column;
