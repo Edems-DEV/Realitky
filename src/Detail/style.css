@@ -101,7 +101,11 @@ tr:nth-child(even){background-color: #fff3e5;}
 }
 
 /*CONTACT 2*/
-#contact2 h1{color: #ff8600; font-size: 1.8em;}
+#contact2 h1{
+  color: #ff8600;
+  font-size: 1.8em;
+  padding-bottom: 15px;
+}
 #contact2{
   margin-top: 30px;
 
@@ -131,7 +135,7 @@ tr:nth-child(even){background-color: #fff3e5;}
   padding-top: 5px;
 }
 #seller h2{font-size: 1.5em;}
-#seller-card {padding: 20px 0;}
+#seller-card {padding-bottom: 20px;}
 
 #seller-badges img {width: 100px;}
 #seller-badges .col{align-items: center;}
@@ -160,6 +164,12 @@ tr:nth-child(even){background-color: #fff3e5;}
 }
 #ask textarea{resize: none; height: 150px;}
 #ask-b{justify-self: center; border-radius: 5px}
+
+/*MAP*/
+#map, #map *{
+  width: 100%;
+  height: 400px;
+}
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
   #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
