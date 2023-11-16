@@ -111,15 +111,7 @@ h3{color: #434345}
 p{color: black}
 
 
-ul{list-style: none;}
-ul li::before {
-  content: "\2022";
-  color: #ff8600;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
+
 
 footer{
   background: #191919;
@@ -234,7 +226,47 @@ footer{
 }
 
 /*FOOTER*/
+#foot{padding: 30px 40px;}
 
+footer h1, footer p{color: white;}
+footer h1{font-size: 1.5em;}
+footer h3{all: unset; color: #5f5f5f;}
+#copyright{color: #606060}
+
+/*NEWS-LETTER*/
+/*footer input{flex-grow: 1;}*/
+#news input{width: 280px;}
+#news div{margin-bottom: 20px;}
+#news{margin-bottom: 50px;}
+
+/*LINKS*/
+#links ul{list-style: none;}
+#links ul li::before {
+  content: "\2022";
+  color: #ff8600;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+#links li{ padding-left: 1.5em;}
+#links li:hover{text-decoration: underline;}
+#links ul{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#links li{font-size: 1.2em;}
+#links h1{margin-bottom: 15px;}
+#links{margin-bottom: 50px;}
+
+/*NEWS*/
+#news-2{width: 60%; /*idk*/}
+#news-2 h1{margin-bottom: 15px;}
+#news-2 div{margin-bottom: 20px;}
+
+/*CR*/
+ #copyright{margin-top: 30px}
 
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
