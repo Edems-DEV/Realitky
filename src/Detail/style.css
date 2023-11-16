@@ -101,16 +101,16 @@ tr:nth-child(even){background-color: #fff3e5;}
 }
 
 /*CONTACT 2*/
+#contact2 h1{color: #ff8600; font-size: 1.8em;}
 #contact2{
   margin-top: 30px;
 
   display: grid;
   gap: 20px;
-  align-items: center;
+  align-items: start;
   justify-items: center;
 }
 /*Seller*/
-
 #seller .row{ justify-content: start; align-items: center;}
 #seller-card{gap: 30px;}
 #seller-badges{gap: 50px}
@@ -130,18 +130,43 @@ tr:nth-child(even){background-color: #fff3e5;}
   text-align: center;
   padding-top: 5px;
 }
-#seller h1{color: #ff8600; font-size: 1.8em;}
 #seller h2{font-size: 1.5em;}
-#seller-badges img {width: 100px;}
-#seller-badges .col{align-items: center;}
 #seller-card {padding: 20px 0;}
 
+#seller-badges img {width: 100px;}
+#seller-badges .col{align-items: center;}
+#seller-badges {display: none;}
 
+/*Ask*/
+#ask form{
+  display: grid;
+  grid-template-areas: "n n"
+                       "t e"
+                       "m m"
+                       "b b";
+  gap: 20px;
+
+}
+#ask-n{grid-area: n;}
+#ask-t{grid-area: t;}
+#ask-e{grid-area: e;}
+#ask-m{grid-area: m;}
+#ask-b{grid-area: b;}
+
+#ask input:not(#ask-b), #ask textarea{
+  border: 1px solid #878787;
+  padding: 10px;
+  border-radius: 0px;
+}
+#ask textarea{resize: none; height: 150px;}
+#ask-b{justify-self: center; border-radius: 5px}
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
   #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   #properties{flex-direction: row;}
+  #contact2{grid-template-columns: 1fr 1fr};
+  #seller-badges {display: flex;}
 }
 
 /*BREAK POINTS*/
