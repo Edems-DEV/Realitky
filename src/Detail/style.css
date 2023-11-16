@@ -9,6 +9,11 @@
   padding: 0;
   font-family: Arial;
 }
+/*--HELPER--*/
+.col{
+  display: flex;
+  flex-direction: column;
+}
 
 /*BODY*/
 /*.margin{*/
@@ -94,6 +99,44 @@ tr:nth-child(even){background-color: #fff3e5;}
   display: grid;
   gap: 20px;
 }
+
+/*CONTACT 2*/
+#contact2{
+  margin-top: 30px;
+
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+/*Seller*/
+
+#seller .row{ justify-content: start; align-items: center;}
+#seller-card{gap: 30px;}
+#seller-badges{gap: 50px}
+#seller-card div{gap: 5px;}
+#seller-card img{border-radius: 100%;}
+#i-mail,#i-tel{text-decoration: underline solid 1px black;}
+#i-mail:before{content: url('../../assets/icon_MAIL_2.png');}
+#i-tel:before{content: url('../../assets/icon_PHONE_2.png');}
+#i-mail:before, #i-tel:before{
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#seller span{
+  color: #7a7a7a;
+  font-size: 1.1em;
+  text-align: center;
+  padding-top: 5px;
+}
+#seller h1{color: #ff8600; font-size: 1.8em;}
+#seller h2{font-size: 1.5em;}
+#seller-badges img {width: 100px;}
+#seller-badges .col{align-items: center;}
+#seller-card {padding: 20px 0;}
+
+
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
   #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
