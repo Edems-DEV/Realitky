@@ -1,0 +1,176 @@
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  --url: url("./../cv9_velke-reality/podklady/slide-01-1920x640.jpg");
+}
+a, button, input{all: unset;}
+
+
+/*other*/
+.line{
+  padding-bottom: 5px;
+  border-bottom: #d9d9d9 1px solid;
+}
+h1, .line-s{
+  border-width: 50px;
+  border-bottom: #ff8600 2px solid;
+}
+
+/*HELPERS*/
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cover{
+  /*BG*/
+  background-image: var(--url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /*for dark*/
+}
+.dark{
+  position: relative;
+}
+.dark::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for darkness */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.dark:hover::before {
+  background-color: rgba(0, 0, 0, 0.35); /* Removes the dark overlay */
+}
+
+
+/*Input*/
+input, .btn {
+  border-radius: 4px;
+  padding: 10px;
+}
+input{
+  background: white;
+  color: #191919; /*<- placeholder ma divný opacity*/
+}
+/*buttons*/
+.btn{
+  background: #ff8600;
+  color: white;
+}
+.btn-phone{
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+
+  font-weight: bold;
+
+  border-radius: 10px;
+  border: #d9d9d9 1px solid;
+  padding: 10px;
+}
+
+.btn-text{ font-weight: bold; }
+.btn-text{ text-decoration: underline #ff8600; }
+
+/*text*/
+h1{color: #434345}
+h2{color: #ff8600}
+h3{color: #434345}
+p{color: black}
+
+
+ul{list-style: none;}
+ul li::before {
+  content: "\2022";
+  color: #ff8600;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+footer{
+  background: #191919;
+  color: white;
+}
+
+#navigation{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px 0px;
+}
+
+/*HERO*/
+#hero{
+  /*size*/
+  height: 300px;
+  /*.cover*/
+  /*.center*/
+  flex-direction: column;
+  gap: 10px;
+}
+#hero div{
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+}
+/*SECTIONS*/
+#sections{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+#sections div{
+  height: 200px;
+}
+#sections div div{
+  /*.center*/
+  flex-direction: column;
+  position: relative; /* Position relative to stack above the overlay */
+  z-index: 2; /* Higher z-index to be above the overlay */
+
+  color: white;
+}
+#sections h1, h2{ all: unset; }
+#sections h1{font-size: 2.5em; font-weight: bold;}
+#sections h2{font-size: 1.5em;}
+
+/*Colors*/
+/*-------PHONE-------*/
+/*-------TABLET-------*/
+
+/*-------DESKTOP-------*/
+@media (min-width: 1025px) {
+  #sections{grid-template-columns: 1fr 1fr 1fr 1fr;}
+  .margin{
+    margin: 0px min(100px, 20%);
+  }
+}
+
+/*center text*/
+/* body * div *, #ad-out{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 1025px){#ad-out{display: none !important;}  } */

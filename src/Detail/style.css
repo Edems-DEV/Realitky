@@ -1,0 +1,36 @@
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+* {
+  /*delete*/
+  /* color: white;
+  text-align: center;
+  text-transform: uppercase; 
+  background-color: white;*/
+}
+/*Colors*/
+/*-------PHONE-------*/
+/*-------TABLET-------*/
+@media (min-width: 481px) {
+}
+/*-------DESKTOP-------*/
+@media (min-width: 1025px) {
+}
+
+/*center text*/
+/* body * div *, #ad-out{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 1025px){#ad-out{display: none !important;}  } */
