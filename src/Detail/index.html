@@ -130,10 +130,10 @@
             </div>
             <div id="ask">
                 <h1>Napište nám, ozveme se</h1>
-                <form>
-                    <input id="ask-n" type="text" placeholder="Jméno a příjmení">
-                    <input id="ask-t" type="tel" placeholder="Telefon">
-                    <input id="ask-e" type="email" placeholder="E-mail">
+                <form method="post">
+                    <input id="ask-n" type="text" placeholder="Jméno a příjmení" required>
+                    <input id="ask-t" type="tel" placeholder="Telefon" required>
+                    <input id="ask-e" type="email" placeholder="E-mail" required>
                     <textarea id="ask-m" placeholder="Napište nám zprávu..."></textarea>
                     <input id="ask-b" class="btn" type="submit" value="ODESLAT POPTÁVKU">
                 </form>
