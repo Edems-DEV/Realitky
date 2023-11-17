@@ -53,13 +53,15 @@
 }
 #properties h1{color: #ff8600;}
 #properties h2{color: #878787;}
-#properties .row{
+#bedge-energy {
   color: white;
   background: #00c700;
 
   width: fit-content;
   gap: 50px;
 }
+#prop-L{justify-content: start; align-items: center}
+#p-calc{ margin-left: 20px; }
 #properties .l-mb{margin-bottom: 10px;}
 
 #p-price{color: black;}
@@ -79,8 +81,10 @@
 #properties h2{font-size: 1.3em}
 #properties{margin-bottom: 20px;}
 
-#bedge-energy{align-items: center}
-#properties .row{padding: 5px 10px;}
+#bedge-energy{
+  padding: 5px 10px;
+  align-items: center;
+}
 #C{
   font-family: 'Raleway', sans-serif;
   font-size: 1.4em;
@@ -181,8 +185,6 @@ tr:nth-child(even){background-color: #fff3e5;}
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
   #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
-  #properties{flex-direction: row;}
-  .a-l{align-items: end;}
   #contact2{grid-template-columns: 1fr 1fr};
   #seller-badges {display: flex;}
 
@@ -190,6 +192,10 @@ tr:nth-child(even){background-color: #fff3e5;}
     padding-left: 4vw;
     padding-right: 4vw;
   }
+
+  #p-label{text-align: end;}
+  #prop-R{ flex-direction: row; }
+  #prop-R, #prop-L{ justify-content: space-between; }
 }
 
 /*BREAK POINTS*/
