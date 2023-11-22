@@ -185,7 +185,7 @@ tr:nth-child(even){background-color: #fff3e5;}
 /*-------DESKTOP-------*/
 @media (min-width: 1025px) {
   #pre-grid{grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
-  #contact2{grid-template-columns: 1fr 1fr};
+  #contact2{grid-template-columns: 1fr 1fr;}
   #seller-badges {display: flex;}
 
   .margin-2{
